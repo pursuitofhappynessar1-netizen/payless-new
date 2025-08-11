@@ -456,7 +456,7 @@ const Home: React.FC = () => {
       </section>
 
       {/* Why Choose Payless Section */}
-      <section className="py-20 bg-white relative">
+      <section className="py-20 bg-white relative pattern-background">
         {/* Background decorative elements */}
         <div className="absolute inset-0 pointer-events-none overflow-hidden">
           <div className="absolute top-1/4 left-10 w-20 h-20 text-sky-100/40">
@@ -475,7 +475,7 @@ const Home: React.FC = () => {
         
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimationWrapper animationType="fade-in">
-            <div className="text-center mb-16">
+            <div className="text-center mb-16 relative z-10">
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
                 Why Choose Payless?
               </h2>
@@ -485,7 +485,7 @@ const Home: React.FC = () => {
             </div>
           </AnimationWrapper>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16 relative z-10">
             {whyPaylessReasons.map((reason, index) => (
               <AnimationWrapper 
                 key={index}
@@ -508,7 +508,7 @@ const Home: React.FC = () => {
           </div>
 
           <AnimationWrapper animationType="scale-in">
-            <div className="flex justify-center">
+            <div className="flex justify-center relative z-10">
               <PaylessCard size="large" showAnimation={false} />
             </div>
           </AnimationWrapper>
