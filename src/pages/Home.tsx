@@ -158,49 +158,9 @@ const Home: React.FC = () => {
 
   const vouchers = [
     {
-      title: 'Free Nile Cruise Night',
-      description: 'Enjoy a free night when you book three or more nights on the Nile Cruise between Luxor and Aswan.',
-      image: 'https://images.pexels.com/photos/262780/pexels-photo-262780.jpeg?auto=compress&cs=tinysrgb&w=400'
-    },
-    {
       title: 'Nile Dinner Discount',
       description: 'Enjoy a 30% discount on an open buffet dinner invitation for 2 persons at selected locations along the Nile.',
       image: 'https://images.pexels.com/photos/1581384/pexels-photo-1581384.jpeg?auto=compress&cs=tinysrgb&w=400'
-    },
-    {
-      title: 'Extended Umrah Trip',
-      description: 'Experience a 14-night Umrah trip at the cost of only 11 nights.',
-      image: 'https://images.pexels.com/photos/8129903/pexels-photo-8129903.jpeg?auto=compress&cs=tinysrgb&w=400'
-    },
-    {
-      title: 'Umrah Discount',
-      description: 'Receive a discount ranging from 2,500 to 5,000 EGP per person on your Umrah trip.',
-      image: 'https://images.pexels.com/photos/8129903/pexels-photo-8129903.jpeg?auto=compress&cs=tinysrgb&w=400'
-    },
-    {
-      title: 'Free Visa Processing',
-      description: 'Visa issuance fees are waived if you book 6+ nights outside Egypt.',
-      image: 'https://images.pexels.com/photos/1591373/pexels-photo-1591373.jpeg?auto=compress&cs=tinysrgb&w=400'
-    },
-    {
-      title: 'Premium Residence Visa',
-      description: 'A premium residence visa for professionals is now available at a discounted rate of $30,000 (was $35,000).',
-      image: 'https://images.pexels.com/photos/1591373/pexels-photo-1591373.jpeg?auto=compress&cs=tinysrgb&w=400'
-    },
-    {
-      title: 'Complimentary International Night',
-      description: 'Enjoy a complimentary night when you book six nights outside Egypt, while keeping your cost under $100.',
-      image: 'https://images.pexels.com/photos/1591373/pexels-photo-1591373.jpeg?auto=compress&cs=tinysrgb&w=400'
-    },
-    {
-      title: 'Free $50 Credit',
-      description: 'Get a cool $50 absolutely free!',
-      image: 'https://images.pexels.com/photos/259027/pexels-photo-259027.jpeg?auto=compress&cs=tinysrgb&w=400'
-    },
-    {
-      title: 'Flight Discount',
-      description: 'Get a fabulous 250 EGP off your flight tickets!',
-      image: 'https://images.pexels.com/photos/912050/pexels-photo-912050.jpeg?auto=compress&cs=tinysrgb&w=400'
     },
     {
       title: 'Free Day Use',
@@ -259,9 +219,22 @@ const Home: React.FC = () => {
   const displayedVouchers = showAllVouchers ? vouchers : vouchers.slice(0, 6);
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen relative overflow-hidden">
+      {/* Background decorative elements */}
+      <div className="fixed inset-0 pointer-events-none z-0">
+        {/* Floating circles */}
+        <div className="absolute top-20 left-10 w-32 h-32 bg-sky-100/30 rounded-full animate-float" style={{animationDelay: '0s'}}></div>
+        <div className="absolute top-40 right-20 w-24 h-24 bg-orange-100/30 rounded-full animate-float" style={{animationDelay: '2s'}}></div>
+        <div className="absolute bottom-40 left-20 w-20 h-20 bg-blue-100/30 rounded-full animate-float" style={{animationDelay: '4s'}}></div>
+        <div className="absolute bottom-20 right-40 w-28 h-28 bg-sky-100/30 rounded-full animate-float" style={{animationDelay: '1s'}}></div>
+        
+        {/* Subtle gradient overlays */}
+        <div className="absolute top-0 left-0 w-96 h-96 bg-gradient-to-br from-sky-50/20 to-transparent rounded-full blur-3xl"></div>
+        <div className="absolute bottom-0 right-0 w-96 h-96 bg-gradient-to-tl from-orange-50/20 to-transparent rounded-full blur-3xl"></div>
+      </div>
+
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-sky-500 via-blue-600 to-indigo-700 text-white overflow-hidden">
+      <section className="relative bg-gradient-to-br from-sky-500 via-blue-600 to-indigo-700 text-white overflow-hidden z-10">
         <div className="absolute inset-0 bg-black/20"></div>
         <div className="absolute inset-0 bg-[url('https://images.pexels.com/photos/1450360/pexels-photo-1450360.jpeg?auto=compress&cs=tinysrgb&w=1920')] bg-cover bg-center opacity-20"></div>
         
@@ -363,7 +336,23 @@ const Home: React.FC = () => {
       </section>
 
       {/* Our Services Section */}
-      <section id="services" className="py-24 bg-gradient-to-br from-gray-50 to-white">
+      <section id="services" className="py-24 bg-gradient-to-br from-gray-50 to-white relative">
+        {/* Background decorative elements */}
+        <div className="absolute inset-0 pointer-events-none overflow-hidden">
+          <div className="absolute top-10 left-10 w-16 h-16 text-sky-200/30">
+            <Plane className="w-full h-full animate-bounce-slow" />
+          </div>
+          <div className="absolute top-20 right-20 w-12 h-12 text-orange-200/30">
+            <Hotel className="w-full h-full animate-float" />
+          </div>
+          <div className="absolute bottom-20 left-1/4 w-14 h-14 text-blue-200/30">
+            <Building className="w-full h-full animate-float" style={{animationDelay: '1s'}} />
+          </div>
+          <div className="absolute bottom-10 right-1/3 w-10 h-10 text-green-200/30">
+            <FileText className="w-full h-full animate-bounce-slow" style={{animationDelay: '2s'}} />
+          </div>
+        </div>
+        
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimationWrapper animationType="fade-in">
             <div className="text-center mb-16">
@@ -380,18 +369,18 @@ const Home: React.FC = () => {
             </div>
           </AnimationWrapper>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {services.map((service, index) => (
               <AnimationWrapper 
                 key={index}
                 animationType="scale-in"
                 delay={index * 200}
               >
-                <div className="group relative">
+                <div className="group relative h-full flex flex-col">
                   {/* Main Card */}
-                  <div className="bg-white rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:scale-[1.02] border border-gray-100 overflow-hidden relative z-10">
+                  <div className="bg-white rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:scale-[1.02] border border-gray-100 overflow-hidden relative z-10 flex flex-col h-full">
                     {/* Image Section */}
-                    <div className="relative h-72 overflow-hidden">
+                    <div className="relative h-48 overflow-hidden">
                       <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent z-10"></div>
                       <img 
                         src={service.image} 
@@ -400,84 +389,90 @@ const Home: React.FC = () => {
                       />
                       
                       {/* Floating Icon */}
-                      <div className={`absolute top-6 right-6 bg-gradient-to-r ${service.color} text-white p-4 rounded-2xl shadow-2xl group-hover:scale-110 group-hover:rotate-3 transition-all duration-500 z-20`}>
+                      <div className={`absolute top-4 right-4 bg-gradient-to-r ${service.color} text-white p-3 rounded-xl shadow-2xl group-hover:scale-110 group-hover:rotate-3 transition-all duration-500 z-20`}>
                         {service.icon}
                       </div>
                       
                       {/* Service Badge */}
-                      <div className="absolute top-6 left-6 bg-white/95 backdrop-blur-sm px-4 py-2 rounded-full flex items-center space-x-2 shadow-lg z-20">
+                      <div className="absolute top-4 left-4 bg-white/95 backdrop-blur-sm px-3 py-1 rounded-full flex items-center space-x-1 shadow-lg z-20">
                         <div className={`w-2 h-2 rounded-full bg-gradient-to-r ${service.color}`}></div>
-                        <span className="text-sm font-bold text-gray-800">PAYLESS</span>
+                        <span className="text-xs font-bold text-gray-800">PAYLESS</span>
                       </div>
                       
                       {/* Title Overlay */}
-                      <div className="absolute bottom-6 left-6 right-6 z-20">
-                        <h3 className="text-3xl font-bold text-white mb-2 drop-shadow-lg">
+                      <div className="absolute bottom-4 left-4 right-4 z-20">
+                        <h3 className="text-xl font-bold text-white mb-1 drop-shadow-lg">
                           {service.title}
                         </h3>
-                        <div className="w-16 h-1 bg-white/80 rounded-full"></div>
+                        <div className="w-12 h-1 bg-white/80 rounded-full"></div>
                       </div>
                     </div>
                     
                     {/* Content Section */}
-                    <div className="p-8">
-                      <p className="text-gray-700 text-lg leading-relaxed font-manrope mb-6">
+                    <div className="p-6 flex-1 flex flex-col">
+                      <p className="text-gray-700 text-sm leading-relaxed font-manrope mb-4 flex-1">
                         {service.description}
                       </p>
                       
                       {/* Features List */}
-                      <div className="space-y-3">
+                      <div className="space-y-2 mb-6">
                         <div className="flex items-center space-x-3">
                           <div className={`w-2 h-2 rounded-full bg-gradient-to-r ${service.color}`}></div>
-                          <span className="text-sm text-gray-600 font-manrope">Exclusive member discounts</span>
+                          <span className="text-xs text-gray-600 font-manrope">Exclusive member discounts</span>
                         </div>
                         <div className="flex items-center space-x-3">
                           <div className={`w-2 h-2 rounded-full bg-gradient-to-r ${service.color}`}></div>
-                          <span className="text-sm text-gray-600 font-manrope">24/7 customer support</span>
+                          <span className="text-xs text-gray-600 font-manrope">24/7 customer support</span>
                         </div>
                         <div className="flex items-center space-x-3">
                           <div className={`w-2 h-2 rounded-full bg-gradient-to-r ${service.color}`}></div>
-                          <span className="text-sm text-gray-600 font-manrope">Instant booking confirmation</span>
+                          <span className="text-xs text-gray-600 font-manrope">Instant booking confirmation</span>
                         </div>
                       </div>
+                      
+                      {/* Service-specific Button */}
+                      <Link
+                        to="/get-your-card"
+                        className={`w-full bg-gradient-to-r ${service.color} hover:opacity-90 text-white py-3 px-4 rounded-lg font-semibold text-sm transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl text-center flex items-center justify-center space-x-2 mt-auto`}
+                      >
+                        {service.icon && React.cloneElement(service.icon, { className: 'h-4 w-4' })}
+                        <span>
+                          {service.title === 'Hotels' ? 'Book Hotel' :
+                           service.title === 'Flight Tickets' ? 'Book Flight' :
+                           service.title === 'Visa' ? 'Apply for Visa' :
+                           service.title === 'Umrah' ? 'Book Umrah' : 'Book Now'}
+                        </span>
+                      </Link>
                     </div>
                   </div>
                   
                   {/* Decorative Background Element */}
-                  <div className={`absolute inset-0 bg-gradient-to-r ${service.bgColor} rounded-3xl transform rotate-1 scale-95 opacity-30 group-hover:rotate-2 group-hover:scale-98 transition-all duration-500`}></div>
+                  <div className={`absolute inset-0 bg-gradient-to-r ${service.bgColor} rounded-3xl transform rotate-1 scale-95 opacity-20 group-hover:rotate-2 group-hover:scale-98 transition-all duration-500`}></div>
                 </div>
               </AnimationWrapper>
             ))}
           </div>
-          
-          {/* Call to Action */}
-          <AnimationWrapper animationType="fade-in" delay={800}>
-            <div className="text-center mt-16">
-              <div className="bg-gradient-to-r from-sky-500 to-blue-600 rounded-3xl p-8 text-white relative overflow-hidden">
-                <div className="absolute inset-0 bg-black/10"></div>
-                <div className="relative z-10">
-                  <h3 className="text-2xl md:text-3xl font-bold mb-4">
-                    Ready to Experience Premium Travel Services?
-                  </h3>
-                  <p className="text-sky-100 text-lg mb-6 font-manrope leading-relaxed">
-                    Get your Payless card today and unlock exclusive access to all our premium services
-                  </p>
-                  <Link
-                    to="/get-your-card"
-                    className="inline-flex items-center bg-white text-sky-600 px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl space-x-2"
-                  >
-                    <CreditCard className="h-5 w-5" />
-                    <span>Get Your Card Now</span>
-                  </Link>
-                </div>
-              </div>
-            </div>
-          </AnimationWrapper>
         </div>
       </section>
 
       {/* Why Choose Payless Section */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-white relative">
+        {/* Background decorative elements */}
+        <div className="absolute inset-0 pointer-events-none overflow-hidden">
+          <div className="absolute top-1/4 left-10 w-20 h-20 text-sky-100/40">
+            <Shield className="w-full h-full animate-float" />
+          </div>
+          <div className="absolute top-1/3 right-10 w-16 h-16 text-orange-100/40">
+            <Award className="w-full h-full animate-bounce-slow" />
+          </div>
+          <div className="absolute bottom-1/4 left-1/4 w-18 h-18 text-green-100/40">
+            <TrendingUp className="w-full h-full animate-float" style={{animationDelay: '1s'}} />
+          </div>
+          <div className="absolute bottom-1/3 right-1/4 w-14 h-14 text-purple-100/40">
+            <Zap className="w-full h-full animate-bounce-slow" style={{animationDelay: '2s'}} />
+          </div>
+        </div>
+        
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimationWrapper animationType="fade-in">
             <div className="text-center mb-16">
@@ -521,7 +516,23 @@ const Home: React.FC = () => {
       </section>
 
       {/* Our Vouchers Section */}
-      <section id="vouchers" className="py-20 bg-gradient-to-br from-sky-50 to-blue-50">
+      <section id="vouchers" className="py-20 bg-gradient-to-br from-sky-50 to-blue-50 relative">
+        {/* Background decorative elements */}
+        <div className="absolute inset-0 pointer-events-none overflow-hidden">
+          <div className="absolute top-10 left-1/4 w-24 h-24 text-orange-200/20">
+            <Gift className="w-full h-full animate-float" />
+          </div>
+          <div className="absolute top-1/3 right-1/4 w-20 h-20 text-sky-200/20">
+            <Ticket className="w-full h-full animate-bounce-slow" />
+          </div>
+          <div className="absolute bottom-1/4 left-1/3 w-16 h-16 text-blue-200/20">
+            <CreditCard className="w-full h-full animate-float" style={{animationDelay: '1s'}} />
+          </div>
+          <div className="absolute bottom-10 right-10 w-18 h-18 text-green-200/20">
+            <Percent className="w-full h-full animate-bounce-slow" style={{animationDelay: '2s'}} />
+          </div>
+        </div>
+        
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimationWrapper animationType="fade-in">
             <div className="text-center mb-16">
@@ -537,15 +548,15 @@ const Home: React.FC = () => {
             </div>
           </AnimationWrapper>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
-            {displayedVouchers.map((voucher, index) => (
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
+            {vouchers.map((voucher, index) => (
               <AnimationWrapper 
                 key={index}
                 animationType="scale-in"
                 delay={index * 150}
               >
-                <div className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105 border border-gray-100 group">
-                  <div className="relative h-48 overflow-hidden">
+                <div className="bg-white rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-[1.02] border border-gray-100 group">
+                  <div className="relative h-64 overflow-hidden">
                     <img 
                       src={voucher.image} 
                       alt={voucher.title}
@@ -553,62 +564,77 @@ const Home: React.FC = () => {
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
                     
-                    <div className="absolute top-4 right-4 bg-gradient-to-r from-orange-500 to-red-500 text-white px-3 py-1 rounded-full text-sm font-bold shadow-lg">
-                      <Gift className="h-3 w-3 inline mr-1" />
+                    <div className="absolute top-6 right-6 bg-gradient-to-r from-orange-500 to-red-500 text-white px-4 py-2 rounded-full text-sm font-bold shadow-lg animate-pulse">
+                      <Gift className="h-4 w-4 inline mr-2" />
                       VOUCHER
                     </div>
                     
-                    <div className="absolute top-4 left-4 bg-white/95 backdrop-blur-sm px-3 py-1 rounded-lg flex items-center space-x-1 shadow-lg">
-                      <CreditCard className="w-3 h-3 text-sky-600" />
-                      <span className="text-xs font-bold text-gray-800">PAYLESS</span>
+                    <div className="absolute top-6 left-6 bg-white/95 backdrop-blur-sm px-4 py-2 rounded-full flex items-center space-x-2 shadow-lg">
+                      <CreditCard className="w-4 h-4 text-sky-600" />
+                      <span className="text-sm font-bold text-gray-800">PAYLESS</span>
+                    </div>
+                    
+                    {/* Title Overlay */}
+                    <div className="absolute bottom-6 left-6 right-6 z-20">
+                      <h3 className="text-2xl font-bold text-white mb-2 drop-shadow-lg">
+                        {voucher.title}
+                      </h3>
+                      <div className="w-16 h-1 bg-white/80 rounded-full"></div>
                     </div>
                   </div>
                   
-                  <div className="p-6">
-                    <h3 className="text-xl font-bold text-gray-900 mb-3">
-                      {voucher.title}
-                    </h3>
-                    <p className="text-gray-600 leading-relaxed font-manrope">
+                  <div className="p-8">
+                    <p className="text-gray-700 text-lg leading-relaxed font-manrope mb-6">
                       {voucher.description}
                     </p>
+                    
+                    {/* Features */}
+                    <div className="space-y-3 mb-6">
+                      <div className="flex items-center space-x-3">
+                        <div className="w-2 h-2 rounded-full bg-gradient-to-r from-orange-400 to-red-500"></div>
+                        <span className="text-sm text-gray-600 font-manrope">Exclusive for Payless members</span>
+                      </div>
+                      <div className="flex items-center space-x-3">
+                        <div className="w-2 h-2 rounded-full bg-gradient-to-r from-orange-400 to-red-500"></div>
+                        <span className="text-sm text-gray-600 font-manrope">Valid at partner locations</span>
+                      </div>
+                      <div className="flex items-center space-x-3">
+                        <div className="w-2 h-2 rounded-full bg-gradient-to-r from-orange-400 to-red-500"></div>
+                        <span className="text-sm text-gray-600 font-manrope">No expiration date</span>
+                      </div>
+                    </div>
+                    
+                    {/* CTA Button */}
+                    <Link
+                      to="/get-your-card"
+                      className="w-full bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white py-3 px-6 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl text-center flex items-center justify-center space-x-2"
+                    >
+                      <Gift className="h-4 w-4" />
+                      <span>Claim This Voucher</span>
+                    </Link>
                   </div>
                 </div>
               </AnimationWrapper>
             ))}
           </div>
-
-          {!showAllVouchers && (
-            <AnimationWrapper animationType="fade-in">
-              <div className="text-center">
-                <button
-                  onClick={() => setShowAllVouchers(true)}
-                  className="bg-gradient-to-r from-sky-500 to-blue-600 hover:from-sky-600 hover:to-blue-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg flex items-center space-x-2 mx-auto"
-                >
-                  <span>Show More Vouchers</span>
-                  <ChevronDown className="h-5 w-5" />
-                </button>
-              </div>
-            </AnimationWrapper>
-          )}
-
-          {showAllVouchers && (
-            <AnimationWrapper animationType="fade-in">
-              <div className="text-center">
-                <button
-                  onClick={() => setShowAllVouchers(false)}
-                  className="bg-gradient-to-r from-gray-500 to-gray-600 hover:from-gray-600 hover:to-gray-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg flex items-center space-x-2 mx-auto"
-                >
-                  <span>Show Less</span>
-                  <ChevronUp className="h-5 w-5" />
-                </button>
-              </div>
-            </AnimationWrapper>
-          )}
         </div>
       </section>
 
       {/* Testimonials Section */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-white relative">
+        {/* Background decorative elements */}
+        <div className="absolute inset-0 pointer-events-none overflow-hidden">
+          <div className="absolute top-1/4 left-10 w-16 h-16 text-yellow-200/30">
+            <Star className="w-full h-full animate-float" />
+          </div>
+          <div className="absolute top-1/3 right-20 w-20 h-20 text-green-200/30">
+            <Heart className="w-full h-full animate-bounce-slow" />
+          </div>
+          <div className="absolute bottom-1/4 left-1/4 w-14 h-14 text-blue-200/30">
+            <Users className="w-full h-full animate-float" style={{animationDelay: '1s'}} />
+          </div>
+        </div>
+        
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimationWrapper animationType="fade-in">
             <div className="text-center mb-16">
@@ -661,7 +687,17 @@ const Home: React.FC = () => {
       </section>
 
       {/* FAQ Section */}
-      <section className="py-20 bg-gradient-to-br from-sky-50 to-blue-50">
+      <section className="py-20 bg-gradient-to-br from-sky-50 to-blue-50 relative">
+        {/* Background decorative elements */}
+        <div className="absolute inset-0 pointer-events-none overflow-hidden">
+          <div className="absolute top-10 right-10 w-24 h-24 text-sky-200/20">
+            <HelpCircle className="w-full h-full animate-float" />
+          </div>
+          <div className="absolute bottom-20 left-10 w-20 h-20 text-blue-200/20">
+            <CheckCircle className="w-full h-full animate-bounce-slow" />
+          </div>
+        </div>
+        
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimationWrapper animationType="fade-in">
             <div className="text-center mb-16">
