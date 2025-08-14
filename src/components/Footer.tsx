@@ -3,7 +3,7 @@ import { Mail, Phone, MapPin, Facebook, Instagram } from 'lucide-react';
 
 const Footer: React.FC = () => {
   return (
-    <footer className="bg-gray-900 text-white">
+    <footer className="glass-card bg-navy-900/80 text-white rounded-none border-0 border-t border-white/30">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Logo and Description */}
@@ -26,7 +26,7 @@ const Footer: React.FC = () => {
                 href="https://www.facebook.com/share/1Dvq3ejXGK/" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="text-gray-400 hover:text-white transition-colors duration-200"
+                className="text-gray-400 hover:text-brand-orange transition-colors duration-200"
               >
                 <Facebook className="h-5 w-5" />
               </a>
@@ -34,7 +34,7 @@ const Footer: React.FC = () => {
                 href="https://www.instagram.com/payless.card?igsh=cGFubXZxb2V6b3hj" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="text-gray-400 hover:text-white transition-colors duration-200"
+                className="text-gray-400 hover:text-brand-orange transition-colors duration-200"
               >
                 <Instagram className="h-5 w-5" />
               </a>
@@ -46,32 +46,32 @@ const Footer: React.FC = () => {
             <h3 className="text-lg font-semibold mb-4">Contact</h3>
             <div className="space-y-3">
               <div className="flex items-center space-x-3">
-                <Mail className="h-4 w-4 text-sky-400" />
+                <Mail className="h-4 w-4 text-brand-orange" />
                 <a 
                   href="mailto:info@paylesscard.com" 
-                  className="text-gray-400 text-sm hover:text-white transition-colors duration-200"
+                  className="text-gray-400 text-sm hover:text-brand-orange transition-colors duration-200"
                 >
                   info@paylesscard.com
                 </a>
               </div>
               <div className="flex items-center space-x-3">
-                <Phone className="h-4 w-4 text-sky-400" />
+                <Phone className="h-4 w-4 text-brand-orange" />
                 <a 
                   href="tel:+201044503305" 
-                  className="text-gray-400 text-sm hover:text-white transition-colors duration-200"
+                  className="text-gray-400 text-sm hover:text-brand-orange transition-colors duration-200"
                 >
                   010 44503305
                 </a>
               </div>
               <div className="flex items-center space-x-3">
-                <MapPin className="h-4 w-4 text-sky-400" />
+                <MapPin className="h-4 w-4 text-brand-orange" />
                 <span className="text-gray-400 text-sm">Cairo, Egypt</span>
               </div>
             </div>
           </div>
         </div>
 
-        <div className="border-t border-gray-800 mt-8 pt-8 text-center">
+        <div className="border-t border-white/20 mt-8 pt-8 text-center">
           <p className="text-gray-400 text-sm">
             © 2025 Payless Travel. All rights reserved. | Terms of Service | Privacy Policy
           </p>

@@ -171,14 +171,14 @@ const Reservation: React.FC = () => {
   
   if (isSubmitted) {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-sky-50 to-blue-50 py-12">
+      <div className="min-h-screen bg-gradient-to-br from-sky-200 via-sky-300 to-blue-500 py-12">
         <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-white rounded-2xl shadow-xl p-8 text-center">
+          <div className="glass-card rounded-2xl shadow-xl p-8 text-center">
             <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
               <CheckCircle className="h-8 w-8 text-green-600" />
             </div>
             
-            <h1 className="text-3xl font-bold text-gray-900 mb-4">
+            <h1 className="text-3xl font-bold text-navy-900 mb-4">
               Reservation Submitted Successfully!
             </h1>
             
@@ -186,19 +186,19 @@ const Reservation: React.FC = () => {
               Thank you for using Payless! We've received your reservation request and will contact you within 24 hours to confirm the details.
             </p>
             
-            <div className="bg-sky-50 border border-sky-200 rounded-lg p-6 mb-8">
-              <h3 className="font-semibold text-gray-900 mb-3">What happens next?</h3>
+            <div className="glass-card-subtle rounded-lg p-6 mb-8">
+              <h3 className="font-semibold text-navy-900 mb-3">What happens next?</h3>
               <div className="space-y-2 text-sm text-gray-600 text-left">
                 <div className="flex items-center space-x-2">
-                  <div className="w-2 h-2 bg-sky-500 rounded-full"></div>
+                  <div className="w-2 h-2 bg-brand-orange rounded-full"></div>
                   <span>We'll verify your Payless card details</span>
                 </div>
                 <div className="flex items-center space-x-2">
-                  <div className="w-2 h-2 bg-sky-500 rounded-full"></div>
+                  <div className="w-2 h-2 bg-brand-orange rounded-full"></div>
                   <span>Process your reservation with our partners</span>
                 </div>
                 <div className="flex items-center space-x-2">
-                  <div className="w-2 h-2 bg-sky-500 rounded-full"></div>
+                  <div className="w-2 h-2 bg-brand-orange rounded-full"></div>
                   <span>Send you confirmation with discount details</span>
                 </div>
               </div>
@@ -207,7 +207,7 @@ const Reservation: React.FC = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/"
-                className="bg-sky-500 hover:bg-sky-600 text-white px-6 py-3 rounded-lg font-medium transition-colors duration-200 flex items-center justify-center space-x-2"
+                className="glass-button-primary px-6 py-3 rounded-xl font-medium transition-colors duration-200 flex items-center justify-center space-x-2"
               >
                 <ArrowLeft className="h-4 w-4" />
                 <span>Back to Home</span>
@@ -225,7 +225,7 @@ const Reservation: React.FC = () => {
                     checkOutDate: ''
                   });
                 }}
-                className="border border-sky-500 text-sky-600 hover:bg-sky-50 px-6 py-3 rounded-lg font-medium transition-colors duration-200"
+                className="glass-card border-brand-orange text-brand-orange hover:bg-white/20 px-6 py-3 rounded-xl font-medium transition-colors duration-200"
               >
                 Make Another Reservation
               </button>
@@ -237,25 +237,25 @@ const Reservation: React.FC = () => {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-sky-50 to-blue-50 py-12">
+    <div className="min-h-screen bg-gradient-to-br from-sky-200 via-sky-300 to-blue-500 py-12">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-12">
           <Link 
             to="/" 
-            className="inline-flex items-center space-x-2 text-sky-600 hover:text-sky-700 mb-6 transition-colors duration-200"
+            className="inline-flex items-center space-x-2 text-navy-900 hover:text-brand-orange mb-6 transition-colors duration-200"
           >
             <ArrowLeft className="h-4 w-4" />
             <span className="text-sm font-medium">Back to Home</span>
           </Link>
           
           <div className="flex justify-center mb-6">
-            <div className="bg-sky-500 p-4 rounded-full">
+            <div className="glass-icon-badge p-4 rounded-full">
               <Calendar className="h-8 w-8 text-white" />
             </div>
           </div>
           
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+          <h1 className="text-4xl md:text-5xl font-bold text-navy-900 mb-4">
             Make a Reservation
           </h1>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto mb-4">
@@ -269,42 +269,42 @@ const Reservation: React.FC = () => {
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           {/* Benefits Sidebar */}
           <div className="lg:col-span-1">
-            <div className="bg-white rounded-2xl shadow-lg p-6 sticky top-8">
-              <h3 className="text-lg font-semibold text-gray-900 mb-6">Reservation Benefits</h3>
+            <div className="glass-card rounded-2xl shadow-lg p-6 sticky top-8">
+              <h3 className="text-lg font-semibold text-navy-900 mb-6">Reservation Benefits</h3>
               
               <div className="space-y-4">
                 <div className="flex items-start space-x-3">
-                  <div className="bg-green-100 p-2 rounded-lg">
+                  <div className="glass-badge-success p-2 rounded-lg">
                     <Shield className="h-4 w-4 text-green-600" />
                   </div>
                   <div>
-                    <p className="font-medium text-gray-900">Guaranteed Discounts</p>
+                    <p className="font-medium text-navy-900">Guaranteed Discounts</p>
                     <p className="text-sm text-gray-600">Exclusive member pricing</p>
                   </div>
                 </div>
                 
                 <div className="flex items-start space-x-3">
-                  <div className="bg-blue-100 p-2 rounded-lg">
-                    <Clock className="h-4 w-4 text-blue-600" />
+                  <div className="glass-icon-badge p-2 rounded-lg">
+                    <Clock className="h-4 w-4 text-white" />
                   </div>
                   <div>
-                    <p className="font-medium text-gray-900">Quick Processing</p>
+                    <p className="font-medium text-navy-900">Quick Processing</p>
                     <p className="text-sm text-gray-600">24-hour confirmation</p>
                   </div>
                 </div>
                 
                 <div className="flex items-start space-x-3">
-                  <div className="bg-orange-100 p-2 rounded-lg">
-                    <Star className="h-4 w-4 text-orange-600" />
+                  <div className="glass-badge p-2 rounded-lg">
+                    <Star className="h-4 w-4 text-brand-orange" />
                   </div>
                   <div>
-                    <p className="font-medium text-gray-900">VIP Treatment</p>
+                    <p className="font-medium text-navy-900">VIP Treatment</p>
                     <p className="text-sm text-gray-600">Priority booking</p>
                   </div>
                 </div>
               </div>
               
-              <div className="mt-6 pt-6 border-t border-gray-200">
+              <div className="mt-6 pt-6 border-t border-white/30">
                 <p className="text-sm text-gray-500 text-center">
                   Exclusive access for Payless members
                 </p>
@@ -314,18 +314,18 @@ const Reservation: React.FC = () => {
 
           {/* Reservation Form */}
           <div className="lg:col-span-2">
-            <div className="bg-white rounded-2xl shadow-xl p-8">
+            <div className="glass-card rounded-2xl shadow-xl p-8">
               <form onSubmit={handleSubmit} className="space-y-6">
                 {/* Personal Information */}
                 <div>
-                  <h3 className="text-lg font-semibold text-gray-900 mb-4 flex items-center space-x-2">
-                    <User className="h-5 w-5 text-sky-500" />
+                  <h3 className="text-lg font-semibold text-navy-900 mb-4 flex items-center space-x-2">
+                    <User className="h-5 w-5 text-brand-orange" />
                     <span>Personal Information</span>
                   </h3>
                   
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
-                      <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
+                      <label htmlFor="name" className="block text-sm font-medium text-navy-900 mb-2">
                         Name *
                       </label>
                       <input
@@ -334,8 +334,8 @@ const Reservation: React.FC = () => {
                         name="name"
                         value={formData.name}
                         onChange={handleInputChange}
-                        className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-sky-500 focus:border-sky-500 transition-colors duration-200 ${
-                          errors.name ? 'border-red-300' : 'border-gray-300'
+                        className={`w-full px-4 py-3 glass-card rounded-lg focus:ring-2 focus:ring-brand-orange focus:border-brand-orange transition-colors duration-200 ${
+                          errors.name ? 'border-red-300' : 'border-white/30'
                         }`}
                         placeholder="Enter your name"
                       />
@@ -345,7 +345,7 @@ const Reservation: React.FC = () => {
                     </div>
                     
                     <div>
-                      <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">
+                      <label htmlFor="phone" className="block text-sm font-medium text-navy-900 mb-2">
                         Phone *
                       </label>
                       <input
@@ -354,8 +354,8 @@ const Reservation: React.FC = () => {
                         name="phone"
                         value={formData.phone}
                         onChange={handleInputChange}
-                        className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-sky-500 focus:border-sky-500 transition-colors duration-200 ${
-                          errors.phone ? 'border-red-300' : 'border-gray-300'
+                        className={`w-full px-4 py-3 glass-card rounded-lg focus:ring-2 focus:ring-brand-orange focus:border-brand-orange transition-colors duration-200 ${
+                          errors.phone ? 'border-red-300' : 'border-white/30'
                         }`}
                         placeholder="+20 123 456 789"
                       />
@@ -367,7 +367,7 @@ const Reservation: React.FC = () => {
                   
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
                     <div>
-                      <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
+                      <label htmlFor="email" className="block text-sm font-medium text-navy-900 mb-2">
                         Email *
                       </label>
                       <input
@@ -376,8 +376,8 @@ const Reservation: React.FC = () => {
                         name="email"
                         value={formData.email}
                         onChange={handleInputChange}
-                        className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-sky-500 focus:border-sky-500 transition-colors duration-200 ${
-                          errors.email ? 'border-red-300' : 'border-gray-300'
+                        className={`w-full px-4 py-3 glass-card rounded-lg focus:ring-2 focus:ring-brand-orange focus:border-brand-orange transition-colors duration-200 ${
+                          errors.email ? 'border-red-300' : 'border-white/30'
                         }`}
                         placeholder="your.email@example.com"
                       />
@@ -387,7 +387,7 @@ const Reservation: React.FC = () => {
                     </div>
                     
                     <div>
-                      <label htmlFor="idSerial" className="block text-sm font-medium text-gray-700 mb-2">
+                      <label htmlFor="idSerial" className="block text-sm font-medium text-navy-900 mb-2">
                         ID Serial (Payless Card Number) *
                       </label>
                       <input
@@ -398,8 +398,8 @@ const Reservation: React.FC = () => {
                         onChange={handleInputChange}
                         maxLength={16}
                         inputMode="numeric"
-                        className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-sky-500 focus:border-sky-500 transition-colors duration-200 ${
-                          errors.idSerial ? 'border-red-300' : 'border-gray-300'
+                        className={`w-full px-4 py-3 glass-card rounded-lg focus:ring-2 focus:ring-brand-orange focus:border-brand-orange transition-colors duration-200 ${
+                          errors.idSerial ? 'border-red-300' : 'border-white/30'
                         }`}
                         placeholder="xxxxxxxxxxxxxxxx"
                       />
@@ -411,15 +411,15 @@ const Reservation: React.FC = () => {
                 </div>
 
                 {/* Reservation Details */}
-                <div className="pt-6 border-t border-gray-200">
-                  <h3 className="text-lg font-semibold text-gray-900 mb-4 flex items-center space-x-2">
-                    <MapPin className="h-5 w-5 text-sky-500" />
+                <div className="pt-6 border-t border-white/30">
+                  <h3 className="text-lg font-semibold text-navy-900 mb-4 flex items-center space-x-2">
+                    <MapPin className="h-5 w-5 text-brand-orange" />
                     <span>Reservation Details</span>
                   </h3>
                   
                   <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                     <div>
-                      <label htmlFor="reservationType" className="block text-sm font-medium text-gray-700 mb-2">
+                      <label htmlFor="reservationType" className="block text-sm font-medium text-navy-900 mb-2">
                         Reservation Type *
                       </label>
                       <select
@@ -427,8 +427,8 @@ const Reservation: React.FC = () => {
                         name="reservationType"
                         value={formData.reservationType}
                         onChange={handleInputChange}
-                        className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-sky-500 focus:border-sky-500 transition-colors duration-200 ${
-                          errors.reservationType ? 'border-red-300' : 'border-gray-300'
+                        className={`w-full px-4 py-3 glass-card rounded-lg focus:ring-2 focus:ring-brand-orange focus:border-brand-orange transition-colors duration-200 ${
+                          errors.reservationType ? 'border-red-300' : 'border-white/30'
                         }`}
                       >
                         <option value="">Select type</option>
@@ -442,7 +442,7 @@ const Reservation: React.FC = () => {
                     </div>
                     
                     <div>
-                      <label htmlFor="checkInDate" className="block text-sm font-medium text-gray-700 mb-2">
+                      <label htmlFor="checkInDate" className="block text-sm font-medium text-navy-900 mb-2">
                         Check-in Date *
                       </label>
                       <input
@@ -452,8 +452,8 @@ const Reservation: React.FC = () => {
                         value={formData.checkInDate}
                         onChange={handleInputChange}
                         min={new Date().toISOString().split('T')[0]}
-                        className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-sky-500 focus:border-sky-500 transition-colors duration-200 ${
-                          errors.checkInDate ? 'border-red-300' : 'border-gray-300'
+                        className={`w-full px-4 py-3 glass-card rounded-lg focus:ring-2 focus:ring-brand-orange focus:border-brand-orange transition-colors duration-200 ${
+                          errors.checkInDate ? 'border-red-300' : 'border-white/30'
                         }`}
                       />
                       {errors.checkInDate && (
@@ -462,7 +462,7 @@ const Reservation: React.FC = () => {
                     </div>
                     
                     <div>
-                      <label htmlFor="checkOutDate" className="block text-sm font-medium text-gray-700 mb-2">
+                      <label htmlFor="checkOutDate" className="block text-sm font-medium text-navy-900 mb-2">
                         Check-out Date *
                       </label>
                       <input
@@ -472,8 +472,8 @@ const Reservation: React.FC = () => {
                         value={formData.checkOutDate}
                         onChange={handleInputChange}
                         min={formData.checkInDate || new Date().toISOString().split('T')[0]}
-                        className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-sky-500 focus:border-sky-500 transition-colors duration-200 ${
-                          errors.checkOutDate ? 'border-red-300' : 'border-gray-300'
+                        className={`w-full px-4 py-3 glass-card rounded-lg focus:ring-2 focus:ring-brand-orange focus:border-brand-orange transition-colors duration-200 ${
+                          errors.checkOutDate ? 'border-red-300' : 'border-white/30'
                         }`}
                       />
                       {errors.checkOutDate && (
@@ -488,7 +488,7 @@ const Reservation: React.FC = () => {
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className="w-full bg-gradient-to-r from-sky-500 to-blue-600 hover:from-sky-600 hover:to-blue-700 text-white py-4 px-6 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none shadow-lg hover:shadow-xl"
+                    className="w-full glass-button-primary py-4 px-6 rounded-xl font-semibold text-lg transition-all duration-300 transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none shadow-lg hover:shadow-xl"
                   >
                     {isSubmitting ? (
                       <div className="flex items-center justify-center space-x-2">

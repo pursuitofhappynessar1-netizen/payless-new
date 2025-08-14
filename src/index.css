@@ -2,6 +2,71 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Glassmorphism Design System */
+@layer components {
+  /* Main glass card styles */
+  .glass-card {
+    @apply bg-white/20 backdrop-blur-lg border border-white/30 shadow-xl;
+  }
+  
+  .glass-card-subtle {
+    @apply bg-white/10 backdrop-blur-md border border-white/20;
+  }
+  
+  .glass-card-primary {
+    @apply bg-gradient-to-br from-sky-400/30 via-blue-500/20 to-blue-600/30 backdrop-blur-lg border border-white/30;
+  }
+  
+  .glass-card-orange {
+    @apply bg-gradient-to-br from-orange-400/30 via-orange-500/20 to-orange-600/30 backdrop-blur-lg border border-white/30;
+  }
+  
+  /* Glass sections */
+  .glass-section {
+    @apply bg-white/10 backdrop-blur-sm;
+  }
+  
+  /* Glass badges */
+  .glass-badge {
+    @apply bg-white/30 backdrop-blur-md border border-white/40 text-navy-900;
+  }
+  
+  .glass-badge-orange {
+    @apply bg-brand-orange/90 backdrop-blur-md border border-orange-300/50 text-white;
+  }
+  
+  .glass-badge-success {
+    @apply bg-green-500/20 backdrop-blur-md border border-green-300/40 text-green-800;
+  }
+  
+  /* Glass icon badges */
+  .glass-icon-badge {
+    @apply bg-brand-orange/90 backdrop-blur-md border border-orange-300/50 text-white;
+  }
+  
+  /* Glass buttons */
+  .glass-button-primary {
+    @apply bg-brand-orange hover:bg-brand-orange/90 text-white backdrop-blur-md border border-orange-300/50 shadow-lg hover:shadow-xl hover:shadow-orange-500/25;
+  }
+  
+  /* Brand colors */
+  .text-navy-900 {
+    @apply text-slate-900;
+  }
+  
+  .text-brand-orange {
+    @apply text-orange-500;
+  }
+  
+  .bg-brand-orange {
+    @apply bg-orange-500;
+  }
+  
+  .bg-navy-900 {
+    @apply bg-slate-900;
+  }
+}
+
 /* Smooth scrolling for the entire page */
 html {
   scroll-behavior: smooth;
@@ -208,4 +273,25 @@ html {
 .pattern-background > * {
   position: relative;
   z-index: 2;
+}
+
+/* Enhanced glassmorphism effects */
+.glass-card:hover {
+  @apply bg-white/25 border-white/40;
+}
+
+.glass-button-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 20px 40px rgba(249, 115, 22, 0.3);
+}
+
+/* Backdrop blur support fallback */
+@supports not (backdrop-filter: blur(10px)) {
+  .glass-card {
+    @apply bg-white/80;
+  }
+  
+  .glass-section {
+    @apply bg-white/60;
+  }
 }

@@ -219,45 +219,44 @@ const Home: React.FC = () => {
   const displayedVouchers = showAllVouchers ? vouchers : vouchers.slice(0, 6);
 
   return (
-    <div className="min-h-screen relative overflow-hidden">
+    <div className="min-h-screen relative overflow-hidden bg-gradient-to-br from-sky-200 via-sky-300 to-blue-500">
       {/* Background decorative elements */}
-      <div className="fixed inset-0 pointer-events-none z-0">
+      <div className="fixed inset-0 pointer-events-none z-0 opacity-30">
         {/* Floating circles */}
-        <div className="absolute top-20 left-10 w-32 h-32 bg-sky-100/30 rounded-full animate-float" style={{animationDelay: '0s'}}></div>
-        <div className="absolute top-40 right-20 w-24 h-24 bg-orange-100/30 rounded-full animate-float" style={{animationDelay: '2s'}}></div>
-        <div className="absolute bottom-40 left-20 w-20 h-20 bg-blue-100/30 rounded-full animate-float" style={{animationDelay: '4s'}}></div>
-        <div className="absolute bottom-20 right-40 w-28 h-28 bg-sky-100/30 rounded-full animate-float" style={{animationDelay: '1s'}}></div>
+        <div className="absolute top-20 left-10 w-32 h-32 bg-white/20 rounded-full animate-float backdrop-blur-sm" style={{animationDelay: '0s'}}></div>
+        <div className="absolute top-40 right-20 w-24 h-24 bg-white/15 rounded-full animate-float backdrop-blur-sm" style={{animationDelay: '2s'}}></div>
+        <div className="absolute bottom-40 left-20 w-20 h-20 bg-white/25 rounded-full animate-float backdrop-blur-sm" style={{animationDelay: '4s'}}></div>
+        <div className="absolute bottom-20 right-40 w-28 h-28 bg-white/20 rounded-full animate-float backdrop-blur-sm" style={{animationDelay: '1s'}}></div>
         
         {/* Subtle gradient overlays */}
-        <div className="absolute top-0 left-0 w-96 h-96 bg-gradient-to-br from-sky-50/20 to-transparent rounded-full blur-3xl"></div>
-        <div className="absolute bottom-0 right-0 w-96 h-96 bg-gradient-to-tl from-orange-50/20 to-transparent rounded-full blur-3xl"></div>
+        <div className="absolute top-0 left-0 w-96 h-96 bg-gradient-to-br from-white/10 to-transparent rounded-full blur-3xl"></div>
+        <div className="absolute bottom-0 right-0 w-96 h-96 bg-gradient-to-tl from-white/15 to-transparent rounded-full blur-3xl"></div>
       </div>
 
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-sky-500 via-blue-600 to-indigo-700 text-white overflow-hidden z-10">
-        <div className="absolute inset-0 bg-black/20"></div>
-        <div className="absolute inset-0 bg-[url('https://images.pexels.com/photos/1450360/pexels-photo-1450360.jpeg?auto=compress&cs=tinysrgb&w=1920')] bg-cover bg-center opacity-20"></div>
+      <section className="relative glass-card text-navy-900 overflow-hidden z-10 border-0 rounded-none">
+        <div className="absolute inset-0 bg-gradient-to-br from-white/10 via-white/5 to-transparent"></div>
         
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-32">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="text-center lg:text-left">
-              <div className="inline-flex items-center bg-orange-500/20 backdrop-blur-sm px-4 py-2 rounded-full mb-6 animate-fade-in-up border border-orange-300/30">
+              <div className="inline-flex items-center glass-badge px-4 py-2 rounded-full mb-6 animate-fade-in-up">
                 <Sparkles className="h-4 w-4 mr-2" />
                 <span className="text-sm font-medium">Egypt's #1 Travel Discount Card</span>
               </div>
               
-              <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight animate-fade-in-up stagger-1">
+              <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight animate-fade-in-up stagger-1 text-navy-900">
                 Wherever You Want to
-                <span className="block bg-gradient-to-r from-orange-300 to-orange-500 bg-clip-text text-transparent">
+                <span className="block text-brand-orange">
                   Travel in Egypt...
                 </span>
                 <span className="block text-3xl md:text-4xl mt-2 font-manrope">
                   Our Card Gives You an 
-                  <span className="text-orange-300"> Unbeatable Discount</span>
+                  <span className="text-brand-orange"> Unbeatable Discount</span>
                 </span>
               </h1>
               
-              <p className="text-xl md:text-2xl text-blue-100 mb-8 max-w-3xl animate-fade-in-up stagger-2 font-manrope">
+              <p className="text-xl md:text-2xl text-gray-600 mb-8 max-w-3xl animate-fade-in-up stagger-2 font-manrope">
                 From the pristine beaches of the North Coast to the ancient wonders of Luxor - 
                 save up to 20% on hotels, dining, and experiences everywhere in Egypt.
               </p>
@@ -265,12 +264,12 @@ const Home: React.FC = () => {
               <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start items-center animate-fade-in-up stagger-3">
                 <Link
                   to="/get-your-card"
-                  className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105 shadow-2xl hover:shadow-orange-500/25 flex items-center space-x-2 animate-pulse-slow"
+                  className="glass-button-primary px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300 transform hover:scale-105 flex items-center space-x-2"
                 >
                   <span>Unlock Your Discount</span>
                   <ArrowRight className="h-5 w-5" />
                 </Link>
-                <div className="flex items-center space-x-2 text-blue-100">
+                <div className="flex items-center space-x-2 text-gray-600">
                   <Heart className="h-5 w-5 text-red-400" />
                   <span className="text-sm font-medium">Loved by 50,000+ travelers</span>
                 </div>
@@ -286,18 +285,18 @@ const Home: React.FC = () => {
       </section>
 
       {/* Core Value Statement Section */}
-      <section className="py-16 bg-gradient-to-r from-orange-500 to-orange-600 text-white">
+      <section className="py-16 glass-card-orange text-navy-900">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <AnimationWrapper animationType="scale-in">
-            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 shadow-2xl">
-              <Target className="h-12 w-12 mx-auto mb-4 text-orange-200" />
-              <h2 className="text-3xl md:text-4xl font-bold mb-4 font-manrope">
+            <div className="glass-card rounded-2xl p-8 shadow-2xl">
+              <Target className="h-12 w-12 mx-auto mb-4 text-brand-orange" />
+              <h2 className="text-3xl md:text-4xl font-bold mb-4 font-manrope text-navy-900">
                 "Wherever you want to travel in Egypt...
               </h2>
-              <h3 className="text-2xl md:text-3xl font-bold text-orange-200 mb-6">
+              <h3 className="text-2xl md:text-3xl font-bold text-brand-orange mb-6">
                 our card gives you an unbeatable discount."
               </h3>
-              <p className="text-xl text-orange-100 max-w-2xl mx-auto font-manrope">
+              <p className="text-xl text-gray-600 max-w-2xl mx-auto font-manrope">
                 This is our promise to you. No matter which Egyptian destination calls to your heart, 
                 Payless ensures you experience it for less.
               </p>
@@ -307,15 +306,15 @@ const Home: React.FC = () => {
       </section>
 
       {/* About Us Section */}
-      <section id="about" className="py-20 bg-white">
+      <section id="about" className="py-20 glass-section">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <AnimationWrapper animationType="slide-in-left">
               <div>
-                <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+                <h2 className="text-4xl md:text-5xl font-bold text-navy-900 mb-6">
                   About Us
                 </h2>
-                <h3 className="text-2xl md:text-3xl font-semibold text-sky-600 mb-6 font-manrope">
+                <h3 className="text-2xl md:text-3xl font-semibold text-brand-orange mb-6 font-manrope">
                   Discover the World with Payless...
                 </h3>
                 <p className="text-lg text-gray-600 leading-relaxed font-manrope">
@@ -336,19 +335,19 @@ const Home: React.FC = () => {
       </section>
 
       {/* Our Services Section */}
-      <section id="services" className="py-24 bg-gradient-to-br from-gray-50 to-white relative">
+      <section id="services" className="py-24 glass-section relative">
         {/* Background decorative elements */}
-        <div className="absolute inset-0 pointer-events-none overflow-hidden">
-          <div className="absolute top-10 left-10 w-16 h-16 text-sky-200/30">
+        <div className="absolute inset-0 pointer-events-none overflow-hidden opacity-20">
+          <div className="absolute top-10 left-10 w-16 h-16 text-white/40">
             <Plane className="w-full h-full animate-bounce-slow" />
           </div>
-          <div className="absolute top-20 right-20 w-12 h-12 text-orange-200/30">
+          <div className="absolute top-20 right-20 w-12 h-12 text-white/40">
             <Hotel className="w-full h-full animate-float" />
           </div>
-          <div className="absolute bottom-20 left-1/4 w-14 h-14 text-blue-200/30">
+          <div className="absolute bottom-20 left-1/4 w-14 h-14 text-white/40">
             <Building className="w-full h-full animate-float" style={{animationDelay: '1s'}} />
           </div>
-          <div className="absolute bottom-10 right-1/3 w-10 h-10 text-green-200/30">
+          <div className="absolute bottom-10 right-1/3 w-10 h-10 text-white/40">
             <FileText className="w-full h-full animate-bounce-slow" style={{animationDelay: '2s'}} />
           </div>
         </div>
@@ -356,11 +355,11 @@ const Home: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimationWrapper animationType="fade-in">
             <div className="text-center mb-16">
-              <div className="inline-flex items-center bg-sky-100 text-sky-700 px-4 py-2 rounded-full text-sm font-semibold mb-6">
+              <div className="inline-flex items-center glass-badge px-4 py-2 rounded-full text-sm font-semibold mb-6">
                 <Sparkles className="h-4 w-4 mr-2" />
                 Premium Services
               </div>
-              <h2 className="text-4xl md:text-6xl font-bold text-gray-900 mb-8 leading-tight">
+              <h2 className="text-4xl md:text-6xl font-bold text-navy-900 mb-8 leading-tight">
                 Our Services
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto font-manrope leading-relaxed">
@@ -378,10 +377,10 @@ const Home: React.FC = () => {
               >
                 <div className="group relative h-full flex flex-col">
                   {/* Main Card */}
-                  <div className="bg-white rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:scale-[1.02] border border-gray-100 overflow-hidden relative z-10 flex flex-col h-full">
+                  <div className="glass-card rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:scale-[1.02] overflow-hidden relative z-10 flex flex-col h-full">
                     {/* Image Section */}
                     <div className="relative h-48 overflow-hidden">
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent z-10"></div>
+                      <div className="absolute inset-0 bg-gradient-to-t from-navy-900/60 via-navy-900/20 to-transparent z-10"></div>
                       <img 
                         src={service.image} 
                         alt={service.title}
@@ -389,14 +388,14 @@ const Home: React.FC = () => {
                       />
                       
                       {/* Floating Icon */}
-                      <div className={`absolute top-4 right-4 bg-gradient-to-r ${service.color} text-white p-3 rounded-xl shadow-2xl group-hover:scale-110 group-hover:rotate-3 transition-all duration-500 z-20`}>
+                      <div className="absolute top-4 right-4 glass-icon-badge p-3 rounded-xl shadow-2xl group-hover:scale-110 group-hover:rotate-3 transition-all duration-500 z-20">
                         {service.icon}
                       </div>
                       
                       {/* Service Badge */}
-                      <div className="absolute top-4 left-4 bg-white/95 backdrop-blur-sm px-3 py-1 rounded-full flex items-center space-x-1 shadow-lg z-20">
-                        <div className={`w-2 h-2 rounded-full bg-gradient-to-r ${service.color}`}></div>
-                        <span className="text-xs font-bold text-gray-800">PAYLESS</span>
+                      <div className="absolute top-4 left-4 glass-badge px-3 py-1 rounded-full flex items-center space-x-1 shadow-lg z-20">
+                        <div className="w-2 h-2 rounded-full bg-brand-orange"></div>
+                        <span className="text-xs font-bold text-navy-900">PAYLESS</span>
                       </div>
                       
                       {/* Title Overlay */}
@@ -417,15 +416,15 @@ const Home: React.FC = () => {
                       {/* Features List */}
                       <div className="space-y-2 mb-6">
                         <div className="flex items-center space-x-3">
-                          <div className={`w-2 h-2 rounded-full bg-gradient-to-r ${service.color}`}></div>
+                          <div className="w-2 h-2 rounded-full bg-brand-orange"></div>
                           <span className="text-xs text-gray-600 font-manrope">Exclusive member discounts</span>
                         </div>
                         <div className="flex items-center space-x-3">
-                          <div className={`w-2 h-2 rounded-full bg-gradient-to-r ${service.color}`}></div>
+                          <div className="w-2 h-2 rounded-full bg-brand-orange"></div>
                           <span className="text-xs text-gray-600 font-manrope">24/7 customer support</span>
                         </div>
                         <div className="flex items-center space-x-3">
-                          <div className={`w-2 h-2 rounded-full bg-gradient-to-r ${service.color}`}></div>
+                          <div className="w-2 h-2 rounded-full bg-brand-orange"></div>
                           <span className="text-xs text-gray-600 font-manrope">Instant booking confirmation</span>
                         </div>
                       </div>
@@ -433,7 +432,7 @@ const Home: React.FC = () => {
                       {/* Service-specific Button */}
                       <Link
                         to="/get-your-card"
-                        className={`w-full bg-gradient-to-r ${service.color} hover:opacity-90 text-white py-3 px-4 rounded-lg font-semibold text-sm transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl text-center flex items-center justify-center space-x-2 mt-auto`}
+                        className="w-full glass-button-primary py-3 px-4 rounded-xl font-semibold text-sm transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl text-center flex items-center justify-center space-x-2 mt-auto"
                       >
                         {service.icon && React.cloneElement(service.icon, { className: 'h-4 w-4' })}
                         <span>
@@ -447,7 +446,7 @@ const Home: React.FC = () => {
                   </div>
                   
                   {/* Decorative Background Element */}
-                  <div className={`absolute inset-0 bg-gradient-to-r ${service.bgColor} rounded-3xl transform rotate-1 scale-95 opacity-20 group-hover:rotate-2 group-hover:scale-98 transition-all duration-500`}></div>
+                  <div className="absolute inset-0 glass-card-subtle rounded-3xl transform rotate-1 scale-95 opacity-30 group-hover:rotate-2 group-hover:scale-98 transition-all duration-500"></div>
                 </div>
               </AnimationWrapper>
             ))}
@@ -456,19 +455,19 @@ const Home: React.FC = () => {
       </section>
 
       {/* Why Choose Payless Section */}
-      <section className="py-20 bg-white relative pattern-background">
+      <section className="py-20 glass-section relative pattern-background">
         {/* Background decorative elements */}
-        <div className="absolute inset-0 pointer-events-none overflow-hidden">
-          <div className="absolute top-1/4 left-10 w-20 h-20 text-sky-100/40">
+        <div className="absolute inset-0 pointer-events-none overflow-hidden opacity-20">
+          <div className="absolute top-1/4 left-10 w-20 h-20 text-white/40">
             <Shield className="w-full h-full animate-float" />
           </div>
-          <div className="absolute top-1/3 right-10 w-16 h-16 text-orange-100/40">
+          <div className="absolute top-1/3 right-10 w-16 h-16 text-white/40">
             <Award className="w-full h-full animate-bounce-slow" />
           </div>
-          <div className="absolute bottom-1/4 left-1/4 w-18 h-18 text-green-100/40">
+          <div className="absolute bottom-1/4 left-1/4 w-18 h-18 text-white/40">
             <TrendingUp className="w-full h-full animate-float" style={{animationDelay: '1s'}} />
           </div>
-          <div className="absolute bottom-1/3 right-1/4 w-14 h-14 text-purple-100/40">
+          <div className="absolute bottom-1/3 right-1/4 w-14 h-14 text-white/40">
             <Zap className="w-full h-full animate-bounce-slow" style={{animationDelay: '2s'}} />
           </div>
         </div>
@@ -476,7 +475,7 @@ const Home: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimationWrapper animationType="fade-in">
             <div className="text-center mb-16 relative z-10">
-              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+              <h2 className="text-4xl md:text-5xl font-bold text-navy-900 mb-6">
                 Why Choose Payless?
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto font-manrope">
@@ -492,11 +491,11 @@ const Home: React.FC = () => {
                 animationType={index % 2 === 0 ? 'slide-in-left' : 'slide-in-right'}
                 delay={index * 200}
               >
-                <div className={`bg-gradient-to-br ${reason.bgColor} p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105 border border-gray-100 group`}>
-                  <div className={`bg-gradient-to-r ${reason.color} text-white p-4 rounded-xl w-fit mb-6 group-hover:scale-110 transition-transform duration-300`}>
+                <div className="glass-card p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105 group">
+                  <div className="glass-icon-badge p-4 rounded-xl w-fit mb-6 group-hover:scale-110 transition-transform duration-300">
                     {reason.icon}
                   </div>
-                  <h3 className="text-2xl font-bold text-gray-900 mb-4">
+                  <h3 className="text-2xl font-bold text-navy-900 mb-4">
                     {reason.title}
                   </h3>
                   <p className="text-gray-700 text-lg leading-relaxed font-manrope">
@@ -516,19 +515,19 @@ const Home: React.FC = () => {
       </section>
 
       {/* Our Vouchers Section */}
-      <section id="vouchers" className="py-20 bg-gradient-to-br from-sky-50 to-blue-50 relative">
+      <section id="vouchers" className="py-20 glass-section relative">
         {/* Background decorative elements */}
-        <div className="absolute inset-0 pointer-events-none overflow-hidden">
-          <div className="absolute top-10 left-1/4 w-24 h-24 text-orange-200/20">
+        <div className="absolute inset-0 pointer-events-none overflow-hidden opacity-20">
+          <div className="absolute top-10 left-1/4 w-24 h-24 text-white/40">
             <Gift className="w-full h-full animate-float" />
           </div>
-          <div className="absolute top-1/3 right-1/4 w-20 h-20 text-sky-200/20">
+          <div className="absolute top-1/3 right-1/4 w-20 h-20 text-white/40">
             <Ticket className="w-full h-full animate-bounce-slow" />
           </div>
-          <div className="absolute bottom-1/4 left-1/3 w-16 h-16 text-blue-200/20">
+          <div className="absolute bottom-1/4 left-1/3 w-16 h-16 text-white/40">
             <CreditCard className="w-full h-full animate-float" style={{animationDelay: '1s'}} />
           </div>
-          <div className="absolute bottom-10 right-10 w-18 h-18 text-green-200/20">
+          <div className="absolute bottom-10 right-10 w-18 h-18 text-white/40">
             <Percent className="w-full h-full animate-bounce-slow" style={{animationDelay: '2s'}} />
           </div>
         </div>
@@ -536,10 +535,10 @@ const Home: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimationWrapper animationType="fade-in">
             <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+              <h2 className="text-4xl md:text-5xl font-bold text-navy-900 mb-6">
                 Our Vouchers
               </h2>
-              <p className="text-2xl text-sky-600 font-semibold mb-4 font-manrope">
+              <p className="text-2xl text-brand-orange font-semibold mb-4 font-manrope">
                 Unlock exclusive vouchers that can save you over 20,000 EGP each year!
               </p>
               <p className="text-lg text-gray-600 max-w-3xl mx-auto font-manrope">
@@ -555,23 +554,23 @@ const Home: React.FC = () => {
                 animationType="scale-in"
                 delay={index * 150}
               >
-                <div className="bg-white rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-[1.02] border border-gray-100 group">
+                <div className="glass-card rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-[1.02] group">
                   <div className="relative h-64 overflow-hidden">
                     <img 
                       src={voucher.image} 
                       alt={voucher.title}
                       className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                    <div className="absolute inset-0 bg-gradient-to-t from-navy-900/60 to-transparent"></div>
                     
-                    <div className="absolute top-6 right-6 bg-gradient-to-r from-orange-500 to-red-500 text-white px-4 py-2 rounded-full text-sm font-bold shadow-lg animate-pulse">
+                    <div className="absolute top-6 right-6 glass-badge-orange px-4 py-2 rounded-full text-sm font-bold shadow-lg animate-pulse">
                       <Gift className="h-4 w-4 inline mr-2" />
                       VOUCHER
                     </div>
                     
-                    <div className="absolute top-6 left-6 bg-white/95 backdrop-blur-sm px-4 py-2 rounded-full flex items-center space-x-2 shadow-lg">
-                      <CreditCard className="w-4 h-4 text-sky-600" />
-                      <span className="text-sm font-bold text-gray-800">PAYLESS</span>
+                    <div className="absolute top-6 left-6 glass-badge px-4 py-2 rounded-full flex items-center space-x-2 shadow-lg">
+                      <CreditCard className="w-4 h-4 text-brand-orange" />
+                      <span className="text-sm font-bold text-navy-900">PAYLESS</span>
                     </div>
                     
                     {/* Title Overlay */}
@@ -591,15 +590,15 @@ const Home: React.FC = () => {
                     {/* Features */}
                     <div className="space-y-3 mb-6">
                       <div className="flex items-center space-x-3">
-                        <div className="w-2 h-2 rounded-full bg-gradient-to-r from-orange-400 to-red-500"></div>
+                        <div className="w-2 h-2 rounded-full bg-brand-orange"></div>
                         <span className="text-sm text-gray-600 font-manrope">Exclusive for Payless members</span>
                       </div>
                       <div className="flex items-center space-x-3">
-                        <div className="w-2 h-2 rounded-full bg-gradient-to-r from-orange-400 to-red-500"></div>
+                        <div className="w-2 h-2 rounded-full bg-brand-orange"></div>
                         <span className="text-sm text-gray-600 font-manrope">Valid at partner locations</span>
                       </div>
                       <div className="flex items-center space-x-3">
-                        <div className="w-2 h-2 rounded-full bg-gradient-to-r from-orange-400 to-red-500"></div>
+                        <div className="w-2 h-2 rounded-full bg-brand-orange"></div>
                         <span className="text-sm text-gray-600 font-manrope">No expiration date</span>
                       </div>
                     </div>
@@ -607,7 +606,7 @@ const Home: React.FC = () => {
                     {/* CTA Button */}
                     <Link
                       to="/get-your-card"
-                      className="w-full bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white py-3 px-6 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl text-center flex items-center justify-center space-x-2"
+                      className="w-full glass-button-primary py-3 px-6 rounded-xl font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl text-center flex items-center justify-center space-x-2"
                     >
                       <Gift className="h-4 w-4" />
                       <span>Claim This Voucher</span>
@@ -621,16 +620,16 @@ const Home: React.FC = () => {
       </section>
 
       {/* Testimonials Section */}
-      <section className="py-20 bg-white relative">
+      <section className="py-20 glass-section relative">
         {/* Background decorative elements */}
-        <div className="absolute inset-0 pointer-events-none overflow-hidden">
-          <div className="absolute top-1/4 left-10 w-16 h-16 text-yellow-200/30">
+        <div className="absolute inset-0 pointer-events-none overflow-hidden opacity-20">
+          <div className="absolute top-1/4 left-10 w-16 h-16 text-white/40">
             <Star className="w-full h-full animate-float" />
           </div>
-          <div className="absolute top-1/3 right-20 w-20 h-20 text-green-200/30">
+          <div className="absolute top-1/3 right-20 w-20 h-20 text-white/40">
             <Heart className="w-full h-full animate-bounce-slow" />
           </div>
-          <div className="absolute bottom-1/4 left-1/4 w-14 h-14 text-blue-200/30">
+          <div className="absolute bottom-1/4 left-1/4 w-14 h-14 text-white/40">
             <Users className="w-full h-full animate-float" style={{animationDelay: '1s'}} />
           </div>
         </div>
@@ -638,7 +637,7 @@ const Home: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimationWrapper animationType="fade-in">
             <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+              <h2 className="text-4xl md:text-5xl font-bold text-navy-900 mb-6">
                 Real Savings, Real Stories
               </h2>
               <p className="text-xl text-gray-600 max-w-2xl mx-auto font-manrope">
@@ -654,14 +653,14 @@ const Home: React.FC = () => {
                 animationType="slide-in-left"
                 delay={index * 200}
               >
-                <div className="bg-gradient-to-br from-sky-50 to-blue-50 p-8 rounded-2xl border border-sky-100 hover:shadow-lg transition-shadow duration-300 group">
+                <div className="glass-card p-8 rounded-2xl hover:shadow-lg transition-shadow duration-300 group">
                   <div className="flex items-center justify-between mb-4">
                     <div className="flex items-center">
                       {[...Array(testimonial.rating)].map((_, i) => (
                         <Star key={i} className="h-4 w-4 text-yellow-400 fill-current" />
                       ))}
                     </div>
-                    <div className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-semibold group-hover:scale-105 transition-transform duration-300">
+                    <div className="glass-badge-success px-3 py-1 rounded-full text-sm font-semibold group-hover:scale-105 transition-transform duration-300">
                       Saved {testimonial.savings}
                     </div>
                   </div>
@@ -671,11 +670,11 @@ const Home: React.FC = () => {
                   </p>
                   
                   <div className="flex items-center space-x-3">
-                    <div className="w-12 h-12 bg-gradient-to-r from-sky-500 to-blue-600 rounded-full flex items-center justify-center">
+                    <div className="w-12 h-12 glass-icon-badge rounded-full flex items-center justify-center">
                       <Users className="h-6 w-6 text-white" />
                     </div>
                     <div>
-                      <p className="font-semibold text-gray-900 text-lg">{testimonial.name}</p>
+                      <p className="font-semibold text-navy-900 text-lg">{testimonial.name}</p>
                       <p className="text-sm text-gray-600 font-manrope">{testimonial.location}</p>
                     </div>
                   </div>
@@ -687,13 +686,13 @@ const Home: React.FC = () => {
       </section>
 
       {/* FAQ Section */}
-      <section className="py-20 bg-gradient-to-br from-sky-50 to-blue-50 relative">
+      <section className="py-20 glass-section relative">
         {/* Background decorative elements */}
-        <div className="absolute inset-0 pointer-events-none overflow-hidden">
-          <div className="absolute top-10 right-10 w-24 h-24 text-sky-200/20">
+        <div className="absolute inset-0 pointer-events-none overflow-hidden opacity-20">
+          <div className="absolute top-10 right-10 w-24 h-24 text-white/40">
             <HelpCircle className="w-full h-full animate-float" />
           </div>
-          <div className="absolute bottom-20 left-10 w-20 h-20 text-blue-200/20">
+          <div className="absolute bottom-20 left-10 w-20 h-20 text-white/40">
             <CheckCircle className="w-full h-full animate-bounce-slow" />
           </div>
         </div>
@@ -701,7 +700,7 @@ const Home: React.FC = () => {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimationWrapper animationType="fade-in">
             <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+              <h2 className="text-4xl md:text-5xl font-bold text-navy-900 mb-6">
                 Frequently Asked Questions
               </h2>
               <p className="text-xl text-gray-600 font-manrope">
@@ -717,16 +716,16 @@ const Home: React.FC = () => {
                 animationType="fade-in"
                 delay={index * 100}
               >
-                <div className="bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden">
+                <div className="glass-card rounded-2xl shadow-lg overflow-hidden">
                   <button
                     onClick={() => setOpenFaq(openFaq === index ? null : index)}
-                    className="w-full px-8 py-6 text-left flex items-center justify-between hover:bg-gray-50 transition-colors duration-200"
+                    className="w-full px-8 py-6 text-left flex items-center justify-between hover:bg-white/10 transition-colors duration-200"
                   >
                     <div className="flex items-center space-x-4">
-                      <div className="bg-sky-100 p-2 rounded-lg">
-                        <HelpCircle className="h-5 w-5 text-sky-600" />
+                      <div className="glass-icon-badge p-2 rounded-lg">
+                        <HelpCircle className="h-5 w-5 text-brand-orange" />
                       </div>
-                      <h3 className="text-lg font-semibold text-gray-900">
+                      <h3 className="text-lg font-semibold text-navy-900">
                         {faq.question}
                       </h3>
                     </div>
@@ -754,15 +753,15 @@ const Home: React.FC = () => {
       </section>
 
       {/* Enhanced CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-sky-500 to-blue-600 text-white">
+      <section className="py-20 glass-card-primary text-navy-900">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <AnimationWrapper animationType="slide-in-left">
               <div className="text-center lg:text-left">
-                <h2 className="text-4xl md:text-5xl font-bold mb-6">
+                <h2 className="text-4xl md:text-5xl font-bold mb-6 text-navy-900">
                   Ready to Start Your Journey with Payless?
                 </h2>
-                <p className="text-xl text-blue-100 mb-8 font-manrope">
+                <p className="text-xl text-gray-600 mb-8 font-manrope">
                   Join thousands of smart travelers who've already discovered the power of Payless. 
                   Your Egyptian adventure awaits - for less!
                 </p>
@@ -770,13 +769,13 @@ const Home: React.FC = () => {
                 <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start items-center">
                   <Link
                     to="/get-your-card"
-                    className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105 shadow-xl flex items-center space-x-2 animate-glow"
+                    className="glass-button-primary px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300 transform hover:scale-105 shadow-xl flex items-center space-x-2"
                   >
                     <Gift className="h-5 w-5" />
                     <span>Book Now and Save Big</span>
                   </Link>
                   
-                  <div className="flex items-center space-x-4 text-blue-100">
+                  <div className="flex items-center space-x-4 text-gray-600">
                     <div className="flex items-center space-x-1">
                       <CheckCircle className="h-4 w-4" />
                       <span className="text-sm font-manrope">24-hour activation</span>
@@ -800,12 +799,12 @@ const Home: React.FC = () => {
       </section>
 
       {/* Final CTA Before Footer */}
-      <section className="py-16 bg-gradient-to-br from-orange-50 to-orange-100">
+      <section className="py-16 glass-section">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <AnimationWrapper animationType="scale-in">
-            <div className="bg-white p-8 rounded-2xl shadow-xl border border-orange-200">
-              <Compass className="h-12 w-12 mx-auto mb-4 text-orange-500" />
-              <h3 className="text-3xl font-bold text-gray-900 mb-4">
+            <div className="glass-card p-8 rounded-2xl shadow-xl">
+              <Compass className="h-12 w-12 mx-auto mb-4 text-brand-orange" />
+              <h3 className="text-3xl font-bold text-navy-900 mb-4">
                 Don't Miss Out on Egypt's Best Deals
               </h3>
               <p className="text-lg text-gray-600 mb-6 font-manrope">
@@ -813,7 +812,7 @@ const Home: React.FC = () => {
               </p>
               <Link
                 to="/get-your-card"
-                className="inline-flex items-center bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg space-x-2"
+                className="inline-flex items-center glass-button-primary px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg space-x-2"
               >
                 <span>Start Your Journey with Payless</span>
                 <ArrowRight className="h-5 w-5" />
